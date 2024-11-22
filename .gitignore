@@ -14,3 +14,4 @@ org.eclipse.buildship.core.prefs
 flutter_export_environment.sh
 .fvm
 *.lock
+/ohos/local.properties

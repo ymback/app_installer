@@ -11,10 +11,11 @@ class AppInstaller {
   ///[iOSAppId] iOS Bundle Id
   ///[review] iOS App Store evaluation
   static Future<void> goStore(String androidAppId, String iOSAppId,
-      {bool review = false}) async {
+      {String? ohosAppId,bool review = false}) async {
     _channel.invokeMethod('goStore', {
       'androidAppId': androidAppId,
       'iOSAppId': iOSAppId,
+      'ohosAppId':ohosAppId,
       'review': review,
     });
   }

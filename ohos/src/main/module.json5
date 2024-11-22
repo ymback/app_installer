@@ -1,0 +1,10 @@
+{
+  "module": {
+    "name": "app_installer",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ]
+  }
+}
