@@ -44,9 +44,13 @@ export default class AppInstallerPlugin implements FlutterPlugin, MethodCallHand
 
   onMethodCall(call: MethodCall, result: MethodResult): void {
     if (call.method == "goStore") {
-      let params: Map<string, ESObject> = call.args as Map<string, ESObject>
-      let appId: string = params.get('ohosAppId')?.asString()
-      if (appId != null && appId.length > 0 && this.context != null) {
+      let args: Map<string, ESObject> = call.args;
+      let appId: string = args.get('ohosAppId')
+      if (appId == null || appId.length == 0) {
+        result.success(false)
+        return
+      }
+      if (this.context != null) {
         this.openMarket(this.context, appId)
       }
       result.success(true)
