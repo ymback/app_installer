@@ -22,7 +22,6 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    namespace = "com.zero.app_installer"
     compileSdk 34
 
     defaultConfig {
