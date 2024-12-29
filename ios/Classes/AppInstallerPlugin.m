@@ -27,7 +27,7 @@
             iTunesLink=[iTunesLink stringByAppendingString:@"?action=write-review"];
         }
         //打开 App Store
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink] options:@{} completionHandler:nil];
 
         result(nil);
     }
